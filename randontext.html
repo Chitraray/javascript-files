@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Text with Different Colors</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: background-color 0.5s ease;
+  }
+  #random-text {
+    font-size: 24px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+<div id="random-text"></div>
+<button onclick="generateRandomText()">Generate Random Text</button>
+<script>
+  function generateRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  function generateRandomText() {
+    var randomText = document.getElementById('random-text');
+    var randomBackgroundColor = generateRandomColor();
+    var randomTextColor = generateRandomColor();
+    var randomTextContent = generateRandomString();
+
+    randomText.style.backgroundColor = randomBackgroundColor;
+    randomText.style.color = randomTextColor;
+    randomText.textContent = randomTextContent;
+  }
+
+  function generateRandomString() {
+    var text = '';
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    for (var i = 0; i < 10; i++) {
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+
+    return text;
+  }
+</script>
+</body>
+</html>
+
