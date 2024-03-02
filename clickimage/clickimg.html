@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+    
+<script>
+
+var a=document.createElement("div")
+document.body.appendChild(a)
+
+var image=document.createElement("img")
+image.setAttribute("src","./f2.jpg")
+image.style.height="200px"
+image.style.width="200px"
+image.style.marginLeft="350px"
+a.appendChild(image)
+
+var b=document.createElement("div")
+b.style.displya="flex"
+b.style.gap="20px"
+b.style.marginLeft="100px"
+// b.style.padding="40px"
+b.style.justifyContent="center"
+document.body.appendChild(b)
+
+var c=document.createElement("img")
+c.setAttribute("src","./f1.jpg")
+c.style.height="200px"
+c.style.width="200px"
+b.appendChild(c)
+
+var d=document.createElement("img")
+d.setAttribute("src","./f2.jpg")
+d.style.height="200px"
+d.style.width="200px"
+b.appendChild(d)
+
+var h=document.createElement("img")
+h.setAttribute("src","./f1.jpg")
+h.style.height="200px"
+h.style.width="200px"
+b.appendChild(h)
+
+c.addEventListener("click",hi)
+d.addEventListener("click",hii)
+h.addEventListener("click",hiii)
+
+function hi(){
+    image.setAttribute("src","./f1.jpg")
+}
+
+function hii(){
+    image.setAttribute("src","./f2.jpg")
+}
+ 
+function hiii(){
+    image.setAttribute("src","./f4.jpg")
+}
+    </script>
+    </body>
+    </html>
