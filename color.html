@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+    <p class="para" style="color: blue;background-color: yellowgreen;font-weight: bold;font-style: italic;font-family: Arial, Helvetica, sans-serif;float: left;">We then add an event listener to the button using addEventListener() , specifying that when it is clicked, 
+        the src attribute of the img element should be changed to a new image file </p>
+
+        <p class="new" style="color: red;background-color: blueviolet;font-size: xx-small;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"></p>
+ <script>
+ a=[3,8,27,81,90]
+for(i=0;i<a.length;i++){
+for(j=i+1;j<a.length;j++){
+        if(a[j]<a[i]){
+            x=a[i]
+            a[i]=a[j]
+            a[j]=x
+        } 
+    }
+}
+console.log(a.join([""]))
+  </script>
+
+<script>
+var butn=document.createElement("button")
+butn.innerText="click me!"
+butn.style.color="white"
+butn.style.backgroundColor="red"
+document.body.prepend(butn)
+</script> 
+
+<script>
+var apple=document.querySelector("p")
+// document.body.append(apple)
+apple.getAttribute("class")
+apple.setAttribute("class","new content")
+apple.classList.add("newclass")
+
+
+
+
+</script>
+</body>
+</html>
