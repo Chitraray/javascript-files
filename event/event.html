@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>document</title>
+</head>
+
+<body>
+
+    <!-- <button>
+        click
+    </button> -->
+    <script>
+         var a=document.createElement("button")
+        a.innerText="click"
+        document.body.appendChild(a)
+
+        // var a=document.getElementsByTagName("button")
+
+        // a[0].addEventListener("click",hi)
+a.addEventListener("click",hi)
+function hi(){
+    var aa=window.prompt("enter your name:")
+    var dd=window.prompt("enter your password:")
+
+window.localStorage.setItem("username",aa)
+window.localStorage.setItem("password",dd)
+
+window.location.assign("./event2.html")
+
+}
+
+
+
+    </script>
+    </body>
+    </html>

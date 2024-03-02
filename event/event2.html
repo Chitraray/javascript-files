@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>document</title>
+</head>
+
+<body>
+
+    <!-- <button>
+        login
+    </button> -->
+    <script>
+        // var a=document.getElementsByTagName("button")
+
+        var a=document.createElement("button")
+        a.innerText="login"
+        document.body.appendChild(a)
+// a[0].addEventListener("click",hii)
+a.addEventListener("click",hii)
+function hii(){
+    var bb=window.prompt("enter your name:")
+    var cc=window.prompt("enter your password:")
+
+var hh=window.localStorage.getItem("username")
+var gg=window.localStorage.getItem("password")
+
+if(bb==hh && cc==gg){
+
+    window.location.assign("./cardjs.html")
+}
+}
+
+
+
+    </script>
+    </body>
+    </html>
