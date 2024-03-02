@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form>
+        <label>Username</label><br><br>
+        <input type="text" name="username" placeholder="username"><br> <br>
+        <label>Password</label><br><br>
+        <input type="text" name="password" placeholder="password"><br> <br>
+       <button type="submit">Submit</button>
+       <button type="submit">click here</button>
+     </form>
+     <script>
+        var formss=document.forms
+        console.log(formss[0]);
+        var arr=[] 
+        // || JSON.parse(localStorage.getItem("registerdata"))
+        formss[0].addEventListener("submit",function(event){
+            // JSON.parse(localStorage.getItem("registerdata"))
+            event.preventDefault();
+            console.log(event.target[0].value)
+            console.log(event.target[1].value)
+            var dataa={
+                username:event.target[0].value,
+                password:event.target[1].value
+            }
+            if(dataa.username.length<5){
+               
+                event.target[0].style.border="2px solid red"}
+                
+            else if(dataa.password.length<5){
+               
+
+            event.target[1].style.border="2px solid red"
+            }else{
+         arr.push(dataa)
+                
+                console.log(arr)
+            }
+            
+            console.log(JSON.stringify(dataa));
+             localStorage.setItem("registerdata",JSON.stringify(arr))
+            event.target[0].value=""
+            event.target[1].value=""
+
+        })
+        var chitra=document.getElementsByTagName("button")
+        chitra[1].addEventListener("click",function(event12)
+        {
+            event12.preventDefault();
+            window.location.assign("./register2.html")
+        })
+     </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+     table,th,td,tr{
+        border: 1px solid black;
+        border-collapse:collapse;
+        }
+    </style>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Password</th>
+        </tr>
+        <tbody id="tbody">
+           
+
+        </tbody>
+       
+    </table>
+    <script>
+       
+        let data=JSON.parse(localStorage.getItem("registerdata"))
+           console.log(data)
+        let tbody=document.getElementById("tbody")
+         console.log(tbody)
+        // var firstRow=document.getElementsByClassName("one")
+        // var secondRow=document.getElementsByClassName("two")
+        for(i=0;i<data.length;i++){
+            let row=document.createElement("tr")
+             let name=document.createElement("td")
+            let pass=document.createElement("td")
+            name.innerText=data[i].username;
+            pass.innerText=data[i].password;
+            row.append(name,pass)
+            tbody.append(row)
+        }
+      
+        // for(i=0;i<bb.length;i++){
+        //     // secondRow[i].innerText=bb[i].password
+        // }
+        // var h1get=document.getElementsByTagName("h1")
+        // console.log(h1get)
+        // h1get[0].innerText=bb[0].username
+        // h1get[1].innerText=bb[0].password
+    </script>
+</body>
+</html>
